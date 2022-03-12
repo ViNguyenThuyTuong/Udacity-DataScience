@@ -3,19 +3,15 @@ Udacity DataScience Nanodegree Project 2 -  Disaster Response Pipeline
 
 ### Table of Contents
 
-1. [Installation](#installation)
-2. [Project Motivation](#motivation)
-3. [File Descriptions](#files)
-4. [Results](#results)
-5. [Authors and Acknowledgements](#acknowledgments)
-
-## Installation <a name="installation"></a>
-
-The code was developed and tested using Python 3.6.5, pandas version 0.25.0, seaborn version 0.8.1, matplotlib version 2.2.2, and squarify version 0.4.3.    
+1. [Project Motivation](#motivation)
+2. [File Descriptions](#files)
+3. [Instruction](#instruction)
+4. [Authors](#author)
+ 
 
 ## Project Motivation<a name="motivation"></a>
 
-For this project, I'd like to use to analyze disaster data
+For this project, I'd like to use some skills of data engineer and data science to analyze disaster data from Figure Eight and to build model for an API that classifies disaster messages.
 
 ## File Descriptions <a name="files"></a>
 
@@ -35,12 +31,26 @@ For this project, I'd like to use to analyze disaster data
 |- train_classifier.py
 |- classifier.pkl  # saved model
 
-## Results<a name="results"></a>
+## Instruction<a name="instruction"></a>
 
-The main findings of the code can be found at the post available here: [Stack Overflow 2021 Analysis](https://medium.com/@nguyenthuytuongvi56/stack-overflow-2021-analysis-445ade4e53b1).
+1. Run the following commands in the project's root directory to set up your database and model.
 
-## Authors, Acknowledgments <a name="acknowledgments"></a>
+    - To run ETL pipeline that cleans data and stores in database
+        ```
+        python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
+        ```
+    - To run ML pipeline that trains classifier and saves
+        ```
+        python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
+        ```
 
-Data is provided by [insights.stackoverflow](https://insights.stackoverflow.com/survey)
+2. Run the following command in the app's directory to run your web app. 
+```
+python run.py
+```
+
+3. Go to http://0.0.0.0:3001/
+
+## Authors <a name="author"></a>
 
 Code author: ViNguyenThuyTuong
