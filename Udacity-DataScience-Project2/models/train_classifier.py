@@ -59,16 +59,23 @@ def tokenize(text):
 
 def build_model():
     '''
-    Build model with pipeline
+    Build model with pipeline and GridSearchCV
     Return:
-        pipeline: model
+        cv: model with GridSearchCV
     '''
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(DecisionTreeClassifier()))
     ])
-    return pipeline
+    parameters = {
+        'vect__max_df': [10, 20],
+        'vect__max_features': (5, 10),
+        'clf__estimator__max_depth' : [20, 30, 50]
+    }
+
+    cv = GridSearchCV(pipeline, param_grid=parameters)
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test):
