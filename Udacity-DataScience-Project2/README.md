@@ -11,7 +11,7 @@ Udacity DataScience Nanodegree Project 2 -  Disaster Response Pipeline
 
 ## Project Motivation<a name="motivation"></a>
 
-For this project, I'd like to use some skills of data engineer and data science to analyze disaster data from Figure Eight and to build a model that classifies disaster messages. I also built a web app with the model inside. This web app analyze and categorize messages expeditiously. This could save many lives in a case of emergency.
+For this project, I'd like to use some skills of data engineer and data science to analyze disaster data from Figure Eight and to build a model that classifies disaster messages. I also built a web app with the model inside. This web app be able to analyze and categorize messages expeditiously. This could save many lives in a case of emergency.
 
 ## File Descriptions <a name="files"></a>
 
