@@ -25,4 +25,4 @@ The main findings of the code can be found at the Medium Blog post available [he
 A Random Forest Classifier was chosen to be the best model by evaluating F1 score and accuracy metrics. The final model achieved an F1 and Accuracy score of 0.7. 
 
 ## Licensing, Authors, Acknowledgements, etc.
-I'd like to acknowledge Udacity for the project idea and workspace.
+Authors: ViThuyTuongNguyen
